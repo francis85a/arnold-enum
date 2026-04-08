@@ -56,7 +56,7 @@
             <archive>
               <manifest>
                 <addClasspath>true</addClasspath>
-                <mainClass>edu.teamrocket.arnold_enum.App</mainClass>
+                <mainClass>edu.teamrocket.arnold_enum.main.ArnoldMain</mainClass>
               </manifest>
               <manifestEntries>
                 <url>${project.url}</url>
