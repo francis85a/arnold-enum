@@ -51,10 +51,10 @@ public class ArnoldEnumTypeTest {
 
 	@Test
 	public void PlanetaNamesIteratorTest() {
-		for (Planeta planeta : Planeta.values()) {
-			assertThat(planeta.name()).isIn(planetas);
-		}
-	}
+    for (Planeta planeta : Planeta.values()) {
+        assertThat(planetas).contains(planeta.name());
+    }
+}
 
 	@Test
 	public void PesoSuperficieMercurioTest() {
@@ -77,7 +77,7 @@ public class ArnoldEnumTypeTest {
 		assertThat(planetas).doesNotContainNull();
 
 		for (Planeta planeta : Planeta.getPlanetasTerrestres()) {
-			assertThat(planeta.name()).isIn(planetasTerrestres);
+    		assertThat(planeta.name()).isIn((Object[]) planetasTerrestres);
 		}
 	}
 
@@ -97,7 +97,7 @@ public class ArnoldEnumTypeTest {
 		assertThat(planetas).doesNotContainNull();
 
 		for (Planeta planeta : Planeta.getGigantesGaseosos()) {
-			assertThat(planeta.name()).isIn(gigantesGaseosos);
+    		assertThat(planeta.name()).isIn((Object[]) gigantesGaseosos);
 		}
 	}
 
